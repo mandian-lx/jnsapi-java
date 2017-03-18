@@ -1,0 +1,11 @@
+--- jnsapi-java-0.4.1/src/main/java/org/xmpp/jnodes/smack/SmackServiceNode.java.orig
++++ jnsapi-java-0.4.1/src/main/java/org/xmpp/jnodes/smack/SmackServiceNode.java
+@@ -215,7 +215,7 @@
+         return result instanceof JingleTrackerIQ ? (JingleTrackerIQ) result : null;
+     }
+ 
+-    private static void deepSearch(final XMPPConnection xmppConnection, final int maxEntries, final String startPoint, final MappedNodes mappedNodes, final int maxDepth, final int maxSearchNodes, final String protocol, final ConcurrentHashMap<String, String> visited) {
++    public static void deepSearch(final XMPPConnection xmppConnection, final int maxEntries, final String startPoint, final MappedNodes mappedNodes, final int maxDepth, final int maxSearchNodes, final String protocol, final ConcurrentHashMap<String, String> visited) {
+         if (xmppConnection == null || !xmppConnection.isConnected()) {
+             return;
+         }
